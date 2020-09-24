@@ -9,6 +9,7 @@ const answersContainer = document.querySelector('.answers-container');
 
 button.addEventListener('click', () => {
     const regex = new RegExp(input.value.toLowerCase(), 'g');
+    console.log(regex);
     answersContainer.innerHTML = '';
 
     if(input.value.length >= 3) {
