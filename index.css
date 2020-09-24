@@ -1,0 +1,12 @@
+body {
+    padding: 20px;
+    text-align: center;
+}
+.answers-container {
+    text-align: left;
+    font-size: 25px;
+}
+input {
+    zoom: 2;
+    margin-top: 10px;
+}
