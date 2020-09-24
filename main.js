@@ -8,7 +8,7 @@ const button = document.querySelector('.submit');
 const answersContainer = document.querySelector('.answers-container');
 
 button.addEventListener('click', () => {
-    const regex = new RegExp(input.value, 'g');
+    const regex = new RegExp(input.value.toLowerCase(), 'g');
     answersContainer.innerHTML = '';
 
     if(input.value.length >= 3) {
