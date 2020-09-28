@@ -8,13 +8,13 @@ const button = document.querySelector('.submit');
 const answersContainer = document.querySelector('.answers-container');
 
 button.addEventListener('click', () => {
-    const regex = new RegExp(input.value.toLowerCase(), 'g');
+    const regex = new RegExp(input.value, 'i');
     console.log(regex);
     answersContainer.innerHTML = '';
 
     if(input.value.length >= 3) {
         for ( let key in questions ) {
-            if( questions[key].text.match(regex)){
+            if( regex.test(questions[key].text) ){
                 answersContainer.innerHTML += '<hr>' + `<p style="color: blue;">${questions[key].text}<\p>`+ '<hr>';
                 for(let answ of answers[key].split(',')) {
                     answersContainer.innerHTML += `<p style="color: green;">${questions[key].a[answ]}<\p>`;
